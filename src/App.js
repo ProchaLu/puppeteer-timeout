@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [text, setText] = useState('test');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <label>
+        Text
+        <input
+          value={text}
+          onChange={(event) => setText(event.currentTarget.value)}
+        />
+      </label>
+      <img
+        src={`https://api.memegen.link/images//${text}.png`}
+        alt=""
+        width={200}
+        height={200}
+      />
     </div>
   );
 }
