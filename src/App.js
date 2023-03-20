@@ -2,7 +2,7 @@ import './App.css';
 import { useState } from 'react';
 
 function App() {
-  const [text, setText] = useState('test');
+  const [text, setText] = useState('doge');
 
   return (
     <div className="App">
@@ -14,7 +14,7 @@ function App() {
         />
       </label>
       <img
-        src={`https://api.memegen.link/images//${text}.png`}
+        src={`https://api.memegen.link/images/${text}.png`}
         alt=""
         width={200}
         height={200}
